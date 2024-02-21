@@ -1,13 +1,15 @@
 /* eslint-disable max-len */
 
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from './assets/Cumbi_White_horizontal.png'; // Asegúrate de que la ruta al logo sea correcta
 
 function App() {
   const [idioma, setIdioma] = useState('español');
 
   return (
-    <div className="App">
+    <div className="flex flex-col min-h-screen">
       <header className="bg-royal-violet text-honeydew p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo centrado utilizando flex */}
@@ -57,15 +59,12 @@ function App() {
           <div className="p-6">
             <h2 className="text-xl font-bold mb-4 text-iris">Querida comunidad de Cumbi,</h2>
             <p className="mb-4">
-              Hoy nos dirigimos a ustedes con noticias significativas. Tras una profunda reflexión y análisis, hemos decidido cerrar las operaciones actuales de Cumbi para emprender un nuevo camino. Esta decisión, aunque difícil, está impulsada por nuestra constante búsqueda de innovación y eficiencia.
+              Estamos viviendo una transformación significativa, impulsada por nuestro compromiso con la innovación y nuestra constante búsqueda de eficiencia. Su apoyo ha sido la piedra angular de nuestro viaje, y estamos profundamente agradecidos por ello.
             </p>
             <p className="mb-4">
-              Queremos expresar nuestro más sincero agradecimiento por el apoyo y confianza que nos han brindado. Su apoyo ha sido el pilar de nuestra empresa, y mientras cerramos este capítulo, queremos asegurarles que no es el fin de nuestra misión.
+              Este cambio no significa el fin de nuestra misión, sino un giro hacia un nuevo comienzo lleno de promesas. Con el objetivo de alinearnos más estrechamente con las necesidades del mercado y los desafíos de nuestros usuarios, nos comprometemos a resurgir más fuertes y capaces que antes.
             </p>
-            <p className="mb-4">
-              Estamos reevaluando, aprendiendo y ya estamos trazando el camino hacia un nuevo comienzo. Volveremos más fuertes, con soluciones que mejor se alineen con las necesidades del mercado y que resuelvan los problemas de nuestros usuarios.
-            </p>
-            <p className="mb-4">Gracias por ser parte de nuestro viaje. Estén atentos para lo que viene.</p>
+            <p className="mb-4">Gracias por su apoyo incondicional. El futuro nos depara desarrollos emocionantes, y los invitamos a seguir conectados con nosotros.</p>
             <p className="font-bold">Con gratitud,</p>
             <p>[El equipo de Cumbi]</p>
           </div>
@@ -73,21 +72,36 @@ function App() {
           <div className="p-6">
             <h2 className="text-xl font-bold mb-4 text-iris">Dear Cumbi Community,</h2>
             <p className="mb-4">
-              We are entering a period of transformation and want to express our sincerest gratitude for the support and trust you have given us. Your support has been the pillar of our company.
-            </p>
-
-            <p className="mb-4">
-              We want to express our sincerest gratitude for the support and trust you have given us. Your support has been the pillar of our company, and as we close this chapter, we want to assure you that this is not the end of our mission.
+              We&apos;re undergoing a significant transformation, driven by our dedication to innovation and our constant pursuit of efficiency. Your support has been the cornerstone of our journey, for which we are immensely grateful.
             </p>
             <p className="mb-4">
-              We are reevaluating, learning, and are already charting the path towards a new beginning. We will return stronger, with solutions that better align with market needs and solve our users problems.
+              This is not the end of our mission but a pivot towards a promising new beginning. With a focus on aligning more closely with market needs and user challenges, we&apos;re committed to emerging stronger and more capable than before.
             </p>
-            <p className="mb-4">Thank you for being part of our journey. Stay tuned for what&aposs to come.</p>
+            <p className="mb-4">Thank you for your unwavering support. The future holds exciting developments, and we invite you to stay connected with us.</p>
             <p className="font-bold">With gratitude,</p>
             <p>[The Cumbi Team]</p>
           </div>
+
         )}
       </main>
+      <footer className="bg-gray-100 text-center p-4 mt-auto">
+        <div className="container mx-auto text-center">
+          <div className="mb-4">
+            <a href="https://www.linkedin.com/company/cumbi/" target="_blank" rel="noopener noreferrer" className="text-iris hover:text-light-green mx-2" aria-label="LinkedIn">
+              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            </a>
+            <a href="https://www.instagram.com/cumbi.pay" target="_blank" rel="noopener noreferrer" className="text-iris hover:text-light-green mx-2" aria-label="Instagram">
+              <FontAwesomeIcon icon={faInstagram} size="lg" />
+            </a>
+            <a href="https://twitter.com/Cumbipay" target="_blank" rel="noopener noreferrer" className="text-iris hover:text-light-green mx-2" aria-label="Twitter">
+              <FontAwesomeIcon icon={faTwitter} size="lg" />
+            </a>
+          </div>
+          <div>
+            <p className="text-gray-700">&copy; 2024 [The Cumbi Team]</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
